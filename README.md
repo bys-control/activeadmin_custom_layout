@@ -33,11 +33,12 @@ Short description and motivation.
           <%= yield :action_items %>
 	  	</div>
 	  </div>
-	  <%#= yield :page_content %>
-	  <%= yield :flash_messages %>
-	  <div id="active_admin_content">
-			<%= yield :main_content %>
-			<%= yield :sidebar %>
+	  <div> <%#= yield :page_content %>
+	  	<%= yield :flash_messages %>
+		  <div id="active_admin_content">
+				<%= yield :main_content %>
+				<%= yield :sidebar %>
+		  </div>
 	  </div>
 	  <%= yield :footer %>
   </div>
