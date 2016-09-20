@@ -4,15 +4,11 @@ module ActiveAdmin
 
       def arbre_content_for( name, &block )
         if block_given?
-          context = Arbre::Context.new do
-            text_node yield
-          end
-
           content_for name.to_sym do
-            context.content
+            Arbre::Context.new do
+              text_node yield
+            end.content
           end
-
-          context.content
         end
       end
 
