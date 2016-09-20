@@ -1,6 +1,12 @@
 module TitleBarPatch
 
   def build_titlebar_right
+    arbre_content_for :titlebar_right do
+      super
+    end
+  end
+
+  def build_action_items
     arbre_content_for :action_items do
       super
     end

@@ -6,42 +6,43 @@ Short description and motivation.
 ### Available exports
 
 ```HTML
+<!DOCTYPE html>
 <html>
-  <head>
-  	<%= yield :title %>
-    <%= yield :stylesheets %>
-    <%= yield :javascripts %>
-    <%= yield :favicon %>
-    <%= yield :meta_tags %>
-    <%= yield :favicon %>
-    <%= csrf_meta_tag %>
-  </head>
-  <body class="<%= yield :body_classes %>" >
-  <div id="wrapper">
-	  unsupported_browser
-	  <div id="header"> <%#= yield :header %>
-			<%= yield :site_title %>
-			<%= yield :global_navigation %>
-			<%= yield :utility_navigation %>
-	  </div>
-	  <div id="title_bar"> <%#= yield :title_bar %>
-	  	<div id="titlebar_left">
-          <%= yield :breadcrumb %>
-          <%= yield :title_tag %>
-	  	</div>
-	  	<div id="titlebar_right">
-          <%= yield :action_items %>
-	  	</div>
-	  </div>
-	  <div> <%#= yield :page_content %>
-	  	<%= yield :flash_messages %>
-		  <div id="active_admin_content">
+	<head>
+		<%= yield :title %>
+		<%= yield :stylesheets %>
+		<%= yield :javascripts %>
+		<%= yield :favicon %>
+		<%= yield :meta_tags %>
+		<%= yield :favicon %>
+		<%= csrf_meta_tag %>
+	</head>
+	<body class="<%= yield :body_classes %>" >
+		<div id="wrapper">
+			<%= yield :unsupported_browser %>
+			<div class="header" id="header"> <%#= yield :header %>
+				<%= yield :site_title %>
+				<%= yield :global_navigation %>
+				<%= yield :utility_navigation %>
+			</div>
+			<div class="title_bar" id="title_bar"> <%#= yield :title_bar %>
+				<div id="titlebar_left">
+					<%= yield :breadcrumb %>
+					<%= yield :title_tag %>
+				</div>
+				<div id="titlebar_right">
+					<%= yield :action_items %>
+				</div>
+			</div>
+			<%#= yield :page_content %>
+			<%= yield :flash_messages %>
+			<div id="active_admin_content" class="<%= (content_for? :sidebar) ? "with_sidebar" : "without_sidebar" %>" >
 				<%= yield :main_content %>
 				<%= yield :sidebar %>
-		  </div>
-	  </div>
-	  <%= yield :footer %>
-  </div>
+			</div>
+			<%= yield :footer %>
+		</div>
+	</body>
 </html>
 ```
 
