@@ -7,6 +7,8 @@ This gem allows to change the default layout of ActiveAdmin without monkey patch
 
 ### Available exports
 
+The following layout template will render the default ActiveAdmin layout:
+
 ```HTML
 <!DOCTYPE html>
 <html>
