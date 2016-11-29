@@ -1,9 +1,13 @@
 # ActiveadminCustomLayout
-Short description and motivation.
+[![Gem Version](https://badge.fury.io/rb/activeadmin_custom_layout.svg)](https://badge.fury.io/rb/activeadmin_custom_layout)
+
+This gem allows to change the default layout of ActiveAdmin without monkey patching its code. You can just use standard application layout templates to organize where ActiveAdmin layout sections should be rendered.
 
 ## Usage
 
 ### Available exports
+
+The following layout template will render the default ActiveAdmin layout:
 
 ```HTML
 <!DOCTYPE html>
