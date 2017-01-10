@@ -14,6 +14,6 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 
+gem 'rails', '5.0.1'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-gem 'rails', github: 'rails/rails', ref: '3cffae5953021966204854fa73bef2f9cd366e9b' # uso esta versión por un bug ya que en los includes y asociaciones las establece como readonly
 gem 'activeadmin', github: 'activeadmin', branch: :master
