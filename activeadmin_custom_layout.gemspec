@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
 
-#  s.add_dependency "activeadmin", ">= 1.0.0.pre4"
+  s.add_dependency "activeadmin", ">= 1.0.0.pre4"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "devise", "~> 4.2.0"
