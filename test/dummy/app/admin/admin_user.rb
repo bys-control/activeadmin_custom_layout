@@ -1,8 +1,14 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
+  scope :all
+
   controller do
     layout 'application'
+  end
+
+  index as: :grid do |context|
+    h1 "Grid"
   end
 
   index do

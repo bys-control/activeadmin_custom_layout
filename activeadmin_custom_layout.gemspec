@@ -20,14 +20,14 @@ Gem::Specification.new do |s|
   s.add_dependency "activeadmin", ">= 1.0.0.pre4"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "devise", "~> 4.2.0"
-  s.add_development_dependency "pry", "~> 0.10.4"
-  s.add_development_dependency "pry-byebug", "~> 3.4.0"
+  s.add_development_dependency "devise", "~> 4.2", ">= 4.2.0"
+  s.add_development_dependency "pry", "~> 0.10", ">= 0.10.4"
+  s.add_development_dependency "pry-byebug", "~> 3.4", ">= 3.4.0"
 
   s.add_development_dependency 'web-console'
-  s.add_development_dependency 'listen', '~> 3.0.5'
+  s.add_development_dependency 'listen', '~> 3.0', '>= 3.0.5'
   s.add_development_dependency 'spring'
-  s.add_development_dependency 'spring-watcher-listen', '~> 2.0.0'
+  s.add_development_dependency 'spring-watcher-listen', '~> 2.0', '>= 2.0.0'
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'annotate'
   s.add_development_dependency 'awesome_print'

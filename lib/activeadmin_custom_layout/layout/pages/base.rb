@@ -1,5 +1,14 @@
 module BasePatch
 
+  def build
+    self.aa_data = {
+      action: params[:action],
+      controller: params[:controller].tr('/', '_'),
+      url: request.path
+    }
+    super
+  end
+
   def add_classes_to_body
     super
     content_for :body_classes do
@@ -27,7 +36,8 @@ module BasePatch
 
       if active_admin_namespace.favicon
         arbre_content_for :favicon do
-          text_node(favicon_link_tag(active_admin_namespace.favicon))
+          t
+          ext_node(favicon_link_tag(active_admin_namespace.favicon))
         end
       end
 
@@ -76,6 +86,7 @@ module BasePatch
       super
     end
   end
+
 end
 
 module ActiveAdmin
