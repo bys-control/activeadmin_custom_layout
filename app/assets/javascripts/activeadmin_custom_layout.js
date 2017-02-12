@@ -1,0 +1,1 @@
+//= require activeadmin_custom_layout/application

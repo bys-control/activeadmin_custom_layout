@@ -72,10 +72,12 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
+Execute installer:
 ```bash
-$ gem install activeadmin_custom_layout
+rails g activeadmin_custom_layout:install
 ```
+
+You can override the default gem layout by creating your own using the structure shown above and then modify `/app/admin/custom_base_controller.rb` file to reference the new layout.
 
 ## Contributing
 Contribution directions go here.
