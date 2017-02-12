@@ -19,8 +19,8 @@ module ActiveAdmin
       #
       # @return [string]
       # 
-      def active_admin_data_tag
-        "<script type=\"text/javascript\">window.active_admin_data = #{aa_data.to_json}</script>".html_safe
+      def active_admin_js_data_tag
+        "<script type=\"text/javascript\">window.App || (window.App = {});window.App.ActiveAdmin = #{aa_data.to_json};</script>".html_safe
       end
 
       def controlller_stylesheet_link_tag

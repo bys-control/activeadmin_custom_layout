@@ -20,6 +20,7 @@ The following layout template will render the default ActiveAdmin layout:
 		<%= yield :meta_tags %>
 		<%= yield :favicon %>
 		<%= csrf_meta_tag %>
+		<%= active_admin_js_data_tag %>
 	</head>
 	<body class="<%= yield :body_classes %>" >
 		<div id="wrapper">
