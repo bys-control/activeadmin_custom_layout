@@ -36,8 +36,7 @@ module BasePatch
 
       if active_admin_namespace.favicon
         arbre_content_for :favicon do
-          t
-          ext_node(favicon_link_tag(active_admin_namespace.favicon))
+          text_node(favicon_link_tag(active_admin_namespace.favicon))
         end
       end
 
