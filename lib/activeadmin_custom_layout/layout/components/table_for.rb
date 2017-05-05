@@ -9,7 +9,7 @@ module TableForPatch
       data = aa_data[:table][:rows][index][:data] ||= []
 
       attr = col.data
-      attr = args[1][:sortable] if args[1] and args[1][:sortable].present?
+      attr = args[1][:sortable] if args[1].is_a? Hash and args[1][:sortable].present?
 
       data << {
         classes: col.html_class,
