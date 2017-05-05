@@ -42,7 +42,7 @@ module TableForPatch
   protected
 
   def build_table
-    aa_data[:table] ||= []
+    aa_data[:table] ||= {}
     super
   end
 
