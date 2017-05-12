@@ -30,8 +30,6 @@ module TableForPatch
   def find_value_patch(resource, attr)
     if attr.is_a? Proc
       nil
-    elsif attr =~ /\A(.+)_id\z/ && reflection_for(resource, $1.to_sym)
-      resource.public_send $1
     elsif resource.respond_to? attr
       resource.public_send attr
     elsif resource.respond_to? :[]
