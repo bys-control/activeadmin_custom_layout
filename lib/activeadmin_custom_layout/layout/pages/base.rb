@@ -7,17 +7,12 @@ module BasePatch
       url: request.path
     }
     super
-  end
-
-  def add_classes_to_body
-    @body.add_class(params[:action])
-    @body.add_class(params[:controller].tr('/', '_'))
-    @body.add_class("active_admin")
-    @body.add_class("logged_in")
-    @body.add_class(active_admin_namespace.name.to_s + "_namespace")
-
     content_for :body_classes do
       @body.class_names
+    end
+
+    content_for :body_attributes do
+      raw(@body.attributes)
     end
   end
 
