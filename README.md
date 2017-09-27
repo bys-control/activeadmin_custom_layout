@@ -9,54 +9,54 @@ This gem allows to change the default layout of ActiveAdmin without monkey patch
 
 The following layout template will render the default ActiveAdmin layout:
 
-```HTML
+```ERB
 <!DOCTYPE html>
 <html>
-	<head>
-		<%= yield :title %>
-		<%= yield :stylesheets %>
-		<%= yield :javascripts %>
-		<%= yield :favicon %>
-		<%= yield :meta_tags %>
-		<%= yield :favicon %>
-		<%= csrf_meta_tag %>
-		<%= active_admin_js_data_tag %>
-	</head>
-	<body class="<%= yield :body_classes %>" >
-		<div id="wrapper">
-			<%= yield :unsupported_browser %>
-			<div class="header" id="header"> <%#= yield :header %>
-				<%= yield :site_title %>
-				<%= yield :global_navigation %>
-				<%= yield :utility_navigation %>
-			</div>
-			<div class="title_bar" id="title_bar"> <%#= yield :title_bar %>
-				<div id="titlebar_left">
-					<%= yield :breadcrumb %>
-					<%= yield :title_tag %>
-				</div>
-				<div id="titlebar_right">
-					<%= yield :action_items %>
-				</div>
-			</div>
-			<%#= yield :page_content %>
-			<%= yield :flash_messages %>
-			<div id="active_admin_content" class="<%= (content_for? :sidebar) ? "with_sidebar" : "without_sidebar" %>" >
-				<%= yield :main_content %>
-				<%= yield :sidebar %>
-			</div>
-			<%= yield :footer %>
-		</div>
-	</body>
+  <head>
+    <%= yield :title %>
+    <%= yield :stylesheets %>
+    <%= yield :javascripts %>
+    <%= yield :favicon %>
+    <%= yield :meta_tags %>
+    <%= yield :favicon %>
+    <%= csrf_meta_tag %>
+    <%= active_admin_js_data_tag %>
+  </head>
+  <body class="<%= yield :body_classes %>" >
+    <div id="wrapper">
+      <%= yield :unsupported_browser %>
+      <div class="header" id="header"> <%#= yield :header %>
+        <%= yield :site_title %>
+        <%= yield :global_navigation %>
+        <%= yield :utility_navigation %>
+      </div>
+      <div class="title_bar" id="title_bar"> <%#= yield :title_bar %>
+        <div id="titlebar_left">
+          <%= yield :breadcrumb %>
+          <%= yield :title_tag %>
+        </div>
+        <div id="titlebar_right">
+          <%= yield :action_items %>
+        </div>
+      </div>
+      <%#= yield :page_content %>
+      <%= yield :flash_messages %>
+      <div id="active_admin_content" class="<%= (content_for? :sidebar) ? "with_sidebar" : "without_sidebar" %>" >
+        <%= yield :main_content %>
+        <%= yield :sidebar %>
+      </div>
+      <%= yield :footer %>
+    </div>
+  </body>
 </html>
 ```
 
 When rendering the index view:
-```HTML
+```ERB
 <div class="table_tools"> <%#= yield :table_tools %>
-	<%= yield :index_batch_actions %>
-	<%= yield :index_scopes %>
-	<%= yield :index_index_list %>
+  <%= yield :index_batch_actions %>
+  <%= yield :index_scopes %>
+  <%= yield :index_index_list %>
 </div>
 <%= yield :index_collection %>
 ```
